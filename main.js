@@ -16,7 +16,7 @@ function boardcreate() { //to create board
 boardcreate()
 
 let go = "circle" //first circle.if circle then square in line no:26
-gameinfo.textContent = "Circle goes first."
+gameinfo.textContent = "Circle goes first"
 
 function addGo(e){
     // console.log(e.target); we can get the clicked div
@@ -24,7 +24,7 @@ function addGo(e){
     goDisplay.classList.add(go) //adding the class 'circle' to it
     e.target.append(goDisplay) //and we append it to what we click on and we click on e.target (we grab e target and append it with the class we created ie class 'circle')
     go = go === "circle" ?"cross" : "circle" //if go is circle change to square else circle
-    gameinfo.textContent = "it's now "+ go+"'s turn."
+    gameinfo.textContent = "it's now "+ go+"'s turn"
     e.target.removeEventListener('click',addGo)
     checkScore()
 }

@@ -14,8 +14,16 @@ body{
 }
 #heading{
     color: rgb(255, 255, 255);
-    font-weight: 600;
+    font-weight: 800;
+    font-size:60px ;
     padding: 20px;
+}
+
+@media only screen and (max-width:500px){
+    #heading{
+        font-size: 40px;
+        font-weight: 600;
+    }
 }
 #info{
     background-color: rgba(255, 255, 255, 0.801);
@@ -23,6 +31,7 @@ body{
     padding: 10px;
     font-size: 30px;
 }
+
 #gameboard{
     width: 600px;
     height: 600px;
@@ -45,7 +54,7 @@ body{
 .square{
     width: 200px;
     height: 200px;
-    background-color: rgba(0, 0, 0, 0.494);
+    background-color: rgba(0, 0, 0, 0.715);
     border: 4px solid rgba(255, 255, 255, 0.516);
     box-sizing: border-box;
     display: flex;
@@ -58,7 +67,7 @@ body{
     .square{
         width: 100px;
         height: 100px;
-        background-color: rgba(0, 0, 0, 0.609);
+        background-color: rgba(0, 0, 0, 0.710);
         border: 4px solid rgba(255, 255, 255, 0.516);
         box-sizing: border-box;
         display: flex;
@@ -72,7 +81,7 @@ body{
     height: 150px;
     width: 150px;
     border-radius: 50%;
-    border: 15px rgb(0, 248, 17) solid;
+    border: 15px #58b0b7 solid;
     box-sizing: border-box;
 }
 @media only screen and (max-width:500px){
@@ -100,18 +109,18 @@ body{
 .cross::before, .cross::after {
     content: "";
     position: absolute;
-    background-color: red;
+    background-color: #f78757;
     transform: rotate(45deg);
 }
 .cross::before{
-    left: 50%;
-    width: 30%;
+    left: 56%;
+    width: 17%;
     margin-left: -15%;
     height: 100%;
 }
 .cross::after{
-    top: 50%;
-    height: 30%;
+    top: 56%;
+    height: 17%;
     margin-top: -15%;
     width: 100%;
 }
