@@ -1,0 +1,117 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-image: url(./download.jfif);
+    background-size: contain;
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#heading{
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    padding: 20px;
+}
+#info{
+    background-color: rgba(255, 255, 255, 0.801);
+    border-radius: 40px;
+    padding: 10px;
+    font-size: 30px;
+}
+#gameboard{
+    width: 600px;
+    height: 600px;
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 40px ;
+}
+@media only screen and (max-width:500px){
+    #gameboard{
+        width: 300px;
+        height: 300px;
+        background-color: rgba(0, 0, 0, 0);
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 40px ;
+    }
+}
+
+.square{
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.494);
+    border: 4px solid rgba(255, 255, 255, 0.516);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;   
+}
+
+@media only screen and (max-width:500px){
+    .square{
+        width: 100px;
+        height: 100px;
+        background-color: rgba(0, 0, 0, 0.609);
+        border: 4px solid rgba(255, 255, 255, 0.516);
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 18px;   
+    }
+}
+
+.circle{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 15px rgb(0, 248, 17) solid;
+    box-sizing: border-box;
+}
+@media only screen and (max-width:500px){
+    .circle{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 12px rgb(0, 248, 17) solid;
+    box-sizing: border-box;
+    }
+}
+
+.cross{
+    height: 150px;
+    width: 150px;
+    position: relative;
+}
+@media only screen and (max-width:500px){
+    .cross{
+        height: 80px;
+        width: 80px;
+        position: relative;
+    }
+}
+.cross::before, .cross::after {
+    content: "";
+    position: absolute;
+    background-color: red;
+    transform: rotate(45deg);
+}
+.cross::before{
+    left: 50%;
+    width: 30%;
+    margin-left: -15%;
+    height: 100%;
+}
+.cross::after{
+    top: 50%;
+    height: 30%;
+    margin-top: -15%;
+    width: 100%;
+}
